@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовое задание CleverTech</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/assets/css/owl.carousel.min.css" rel="stylesheet">
 </head>
 <body>
-check123123
+<!--#include file="header.html"-->
+<div class="owl-carousel owl-theme">
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+    <div class="item"><img src="/assets/images/img-01.jpg" alt=""></div>
+</div>
+<div class="container">
+    <section id="emailForm">
+        <h4 class="alert-heading">Вы можете отправить себе письмо</h4>
+        <h6 class="alert-heading">За кадром обычная php функция отправит вам письмо на введенный ниже e-mail!</h6>
+        <form method="post" action="/index.html" id="sendThisForm">
+            <div class="form-row">
+                <div class="col-md-3">
+                    <input type="text" name="name" class="form-control" placeholder="Имя" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="surname" class="form-control" placeholder="Фамилия" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="email" class="form-control" placeholder="E-mail" required>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+<!--#include file="footer.html"-->
 </body>
 </html>

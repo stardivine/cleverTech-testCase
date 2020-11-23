@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 14px;
+    line-height: 1.6;
+    color: black;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.item{
+    max-height: 530px;
+}
+.form-control{
+    margin-bottom: 10px;
+}

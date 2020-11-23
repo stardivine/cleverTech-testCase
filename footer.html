@@ -1,0 +1,51 @@
+<footer>
+    <div class="card text-center">
+        <div class="card-header">
+            Конец презентации
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">На этом всё</h5>
+            <p class="card-text">Тут всё заканчивается, можно подняться наверх кликнув кнопку ниже</p>
+            <a href="#slider" class="btn btn-primary">Вверх!</a>
+        </div>
+        <div class="card-footer text-muted">
+            Спасибо за внимание
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    $(function($){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+        $(document).on('submit', '#sendThisForm', function () {
+            var myData = $(this).serialize();
+            $.ajax({
+                url: "/assets/ajax/mail.php",
+                type: "POST",
+                dataType: 'json',
+                data: myData,
+                success: function (result) {
+                    alert(result.message);
+                },
+            });
+            return false;
+        })
+
+    })
+</script>
