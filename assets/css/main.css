@@ -11,6 +11,13 @@ body{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    font-size: 13px;
+}
 
 /*CUSTOM_SLIDER_STYLES START*/
 .slider {
@@ -34,6 +41,7 @@ body{
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+    max-height: 600px;
 }
 .ddsSliderControl {
     position: absolute;
@@ -119,12 +127,12 @@ body{
 }
 .btn{
     padding: .5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: 16px;
     border-radius: .3rem;
     color: #fff;
     background-color: #545b62;
     border-color: #4e555b;
+    margin-bottom: 15px;
 }
 .text-muted{
     font-size: 15px;
@@ -155,13 +163,51 @@ input{
     margin-bottom: 10px;
     border: 1px solid black;
 }
-#emailForm{
+.ddsPart{
     text-align: center;
+    padding: 1px 15px  25px 15px;
+    background: linear-gradient(179.87deg, #F5F4F8 0.02%, rgba(106, 232, 223, 0) 99.29%);
+}
+
+/*CUSTOM_FORM_STYLES END*/
+/*VIDEO_STYLES START*/
+#video input{
+    width: 60%;
+    margin-right: 20px;
+}
+.center-mode{
     max-width: 500px;
     margin: 0 auto;
-    padding: 0 15px  25px 15px;
+
 }
-/*CUSTOM_FORM_STYLES END*/
+.textArea{
+    text-align: left;
+}
+/*#emailForm{*/
+/*    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
+/*}*/
+/*#video{*/
+/*    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
+/*}*/
+/*.smart-scroll{*/
+/*    transform: translate(0, 120%);*/
+/*    opacity: 0;*/
+/*    transition: all 0.8s ease-in-out 0s;*/
+/*}*/
+/*.smart-scroll.visible{*/
+/*    transform: translate(0, 0);*/
+/*    opacity: 1;*/
+/*}*/
+
+@media (min-width: 893px) {
+    iframe {
+        width: 45vw;
+        height: 25.3125vw; /* 45*9/16 */
+        margin-left: 2vw;
+        margin-right: 2vw
+    }
+}
+/*VIDEO_STYLES END*/
 @media screen and (prefers-reduced-motion: no-preference) {
     html,
     body {

@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовое задание CleverTech</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
+    <link href="/assets/css/main.css?" rel="stylesheet">
 
 </head>
 <body>
 <!--#include file="header.html"-->
+
 <section id="slider">
-<div class="slider">
-    <div class="ddsWrapper">
-        <div class="ddsItem">
-            <img src="/assets/images/img-01.jpg" alt="">
+    <div class="slider">
+        <div class="ddsWrapper">
+            <div class="ddsItem">
+                <img src="/assets/images/img-01.jpg" alt="">
+            </div>
+            <div class="ddsItem">
+                <img src="/assets/images/img-01.jpg" alt="">
+            </div>
+            <div class="ddsItem">
+                <img src="/assets/images/img-01.jpg" alt="">
+            </div>
+            <div class="ddsItem">
+                <img src="/assets/images/img-01.jpg" alt="">
+            </div>
         </div>
-        <div class="ddsItem">
-            <img src="/assets/images/img-01.jpg" alt="">
-        </div>
-        <div class="ddsItem">
-            <img src="/assets/images/img-01.jpg" alt="">
-        </div>
-        <div class="ddsItem">
-            <img src="/assets/images/img-01.jpg" alt="">
-        </div>
+        <a class="ddsSliderControl ddsSliderControl_left" href="javascript:void(0)" role="button"></a>
+        <a class="ddsSliderControl ddsSliderControl_right ddsSliderControl_show" href="javascript:void(0)"
+           role="button"></a>
     </div>
-    <a class="ddsSliderControl ddsSliderControl_left" href="javascript:void(0)" role="button"></a>
-    <a class="ddsSliderControl ddsSliderControl_right ddsSliderControl_show" href="javascript:void(0)" role="button"></a>
-</div>
 </section>
 
-<section id="emailForm">
-    <h2 class="alert-heading">Вы можете отправить себе письмо</h2>
-    <h3 class="alert-heading">За кадром обычная php функция отправит вам письмо на введенный ниже e-mail!</h3>
-    <form method="post" action="/index.html" id="sendThisForm">
+<section id="emailForm" class="ddsPart">
+    <div class="center-mode smart-scroll">
+        <h2 class="alert-heading">Вы можете отправить себе письмо</h2>
+        <h3 class="alert-heading">За кадром обычная php функция отправит вам письмо на введенный ниже e-mail!</h3>
+        <form method="post" action="/index.html" id="sendThisForm">
             <div class="col-md-3">
                 <input id="name" type="text" name="name" class="form-control" placeholder="Имя" required>
             </div>
@@ -48,9 +52,52 @@
             <div class="col-md-3">
                 <button type="submit" class="btn btn-primary mb-2">Отправить</button>
             </div>
-    </form>
+        </form>
+    </div>
 </section>
+<section id="video" class="ddsPart">
+    <div class="center-mode">
+        <h2 class="alert-heading">Галерея с видео</h2>
+        <h3 class="alert-heading"> Здесь вы можете вставить ссылку на видео с youtube.com и посмотреть его. Если ссылку
+            не вставлять, то будет стандартное видео</h3>
+        <input id="youtubeVideo" type="text" name="videoLink" placeholder="Вставьте ссылку на видео с Youtube">
+        <button id="youButton" type="button" class="btn">Вставить</button>
+    </div>
+    <iframe id="myFrame" width="auto" height="auto" src="https://www.youtube.com/embed/1ogR2N6kJXw" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+</section>
+<section id="myJson" class="ddsPart">
+    <div class="center-mode">
+        <h2 class="alert-heading">Асинхронный запрос</h2>
+        <h3 class="alert-heading">Нажмите кнопку и с сайта примера (который был в тз) подтянутся данные. Можно написать число (от 1 до 100) чтобы подгрузить другие данные в текстовую область</h3>
+        <input id="jsonInput" type="number" name="jsonNumber" placeholder="Число от 1 до 100" max="100">
+        <button id="jsonButton" type="button" class="btn">Вставить</button>
+    </div>
+    <div id="text">
 
+    </div>
+</section>
+<section id="buttons" class="ddsPart">
+    <div class="center-mode">
+        <h2 class="alert-heading">Интерактивные кнопки</h2>
+        <h3 class="alert-heading">Управление этим блоком через кнопки</h3>
+    </div>
+    <button type="button" class="btn" data-css="color" data-value="green">Изменить цвет текста на зеленый</button>
+    <button type="button" class="btn" data-css="fontSize" data-value="20px">Увеличить размер текста до 20px</button>
+    <button type="button" class="btn" data-css="margin" data-value="0 auto">Отцентрировать блок с текстом</button>
+    <button type="button" class="btn" data-css="textAlign" data-value="left">Отцентрировать текст по левому краю</button>
+    <button type="button" class="btn" data-css="textAlign" data-value="right">Отцентрировать текст по правому краю</button>
+    <button type="button" class="btn" data-css="textAlign" data-value="center">Отцентрировать текст по центру краю</button>
+    <button type="button" class="btn" data-css="remove">Удалить блок с текстом</button>
+    <button type="button" class="btn" data-css="insert">Вставить блок с текстом</button>
+    <button type="button" class="btn" data-css="backgroundColor" data-value="rgb(251, 116, 63)">Цвет заднего фона</button>
+    <button type="button" class="btn" data-css="cancel">Отменить изменения</button>
+    <div id="textArea">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+</section>
 <!--#include file="footer.html"-->
 </body>
 </html>
