@@ -183,23 +183,12 @@ input{
 .textArea{
     text-align: left;
 }
-/*#emailForm{*/
-/*    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
-/*}*/
-/*#video{*/
-/*    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);*/
-/*}*/
-/*.smart-scroll{*/
-/*    transform: translate(0, 120%);*/
-/*    opacity: 0;*/
-/*    transition: all 0.8s ease-in-out 0s;*/
-/*}*/
-/*.smart-scroll.visible{*/
-/*    transform: translate(0, 0);*/
-/*    opacity: 1;*/
-/*}*/
 
-@media (min-width: 893px) {
+
+@media (max-width: 685px) {
+    #slider{margin-top: 70px}
+}
+@media (min-width: 685px) {
     iframe {
         width: 45vw;
         height: 25.3125vw; /* 45*9/16 */
